@@ -1,0 +1,37 @@
+.chat
+  .chat__header
+    .chat__header__left
+      .chat__header__left__groupname
+        test
+      %ul.chat__header__left__members
+        Member：
+        %class.chat__header__left__members__member
+          メンバー名 
+    .chat__header__right
+      = link_to "#" do
+        EDIT
+
+  .chat__messages
+    .chat__messages__message
+      .chat__messages__message__upper__message
+        .chat__messages__message__upper-message__user__name
+          メンバー
+      .chat__messages__message__upper__message__date
+        2019/03/04
+    .chat__messages__message__lower_meesage
+      .chat__messages__message__lower__message__content
+        メッセージ
+
+  .chat__form
+    %form
+      %input.chat__form__message{placeholder: 'テキスト入力欄', type:'text', size: '30'}
+      .chat__form__mask
+        %label.chat__form__mask__image
+          = icon('fa','image',class: 'icon')
+          %input.chat__hidden{type: 'file'}
+      %input.chat__form__submit{type: 'submit', value: 'Send'}
+
+
+
+
+        
