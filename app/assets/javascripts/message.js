@@ -18,8 +18,8 @@ $(function(){
          </div>
          <img src=${message.image} >
        </div>`
-     return html;
-   } else {
+   } 
+    else {
      var html =
       `<div class="message" data-message-id=${message.id}>
          <div class="upper-message">
@@ -36,9 +36,9 @@ $(function(){
            </p>
          </div>
        </div>`
+    }
      return html;
    };
- }
 $('.new_message').on('submit', function(e){
  e.preventDefault();
  var formData = new FormData(this);
@@ -59,7 +59,9 @@ $('.new_message').on('submit', function(e){
   })
    .fail(function(){
      alert('error');
-   });
-   return false;
+   })
+  .always(function(){
+    $('.form__submit').prop('disabled', false);
+  })
  });
 });
