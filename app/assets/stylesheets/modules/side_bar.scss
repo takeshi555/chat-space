@@ -3,6 +3,7 @@
   width: 300px;
   background-color: #253141;
   float: left;
+  text-decoration: none;
   .header {
     height: 100px;
     line-height: 100px;
@@ -36,9 +37,11 @@
       &__name {
         color: #ffffff;
         font-size: 15px;
+        text-decoration: none;
       }
       &__message{
         color: #ffffff;
+        text-decoration: none;
         font-size: 11px;
         margin-top: 5px;
       }
