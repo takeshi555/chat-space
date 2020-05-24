@@ -6,7 +6,7 @@
       %ul.chat__header__left__members
         Member：
         - @group.users.each do |user|
-          %span.chat-header__user #{user.name}
+          %li.chat-header__user #{user.name}
     .chat__header__right
       = link_to 'Edit', edit_group_path(@group.id)
 
